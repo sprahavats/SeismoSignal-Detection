@@ -42,6 +42,11 @@ except Exception as exc:
 if len(catalog) == 0:
     raise SystemExit("No matching earthquake events were returned.")
 
+# Exclude the event already used to develop the detector.
+catalog = [
+    event for event in catalog
+    if "us6000qw60" not in str(event.resource_id)
+]
 print(f"Found {len(catalog)} candidate events.")
 
 downloaded = False
@@ -137,7 +142,7 @@ for event in catalog:
                         "downloaded_at_utc": datetime.now(
                             timezone.utc
                         ).isoformat(),
-                        "data_provider": "IRIS FDSN",
+                        "data_provider": "EarthScope FDSN",
                     }
 
                     metadata_path.write_text(
