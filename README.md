@@ -467,7 +467,7 @@ The project provides a foundation for systematic investigation of seismic event 
 ## Author
 
 **Spraha Vats**
-
+Btech, Civil engineering, IIT Delhi
 Independent Research Project — SeismoSignal-Detection
 
 Interests: Seismic signal processing, scientific computing, data-driven event detection, and the application of computational methods to civil and geophysical engineering problems.
